@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="64dp"
+        android:text="Alcool ou Gasolina ?"
+        android:textColor="#6A6565"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/icon_gas_station"
+        app:layout_constraintEnd_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toTopOf="@+id/txtTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCentro"
+        android:layout_width="318dp"
+        android:layout_height="278dp"
+        android:background="#FFF06E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintVertical_bias="0.164">
+
+        <ImageView
+            android:id="@+id/lblAlcool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_acool" />
+
+        <EditText
+            android:id="@+id/editAlcool"
+            android:layout_width="150dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="10dp"
+            android:text="Valor do Alcool"
+            android:textColor="#A9515C58"
+            app:layout_constraintBottom_toBottomOf="@+id/lblAlcool"
+            app:layout_constraintStart_toEndOf="@+id/lblAlcool"
+            app:layout_constraintTop_toTopOf="@+id/lblAlcool" />
+
+        <ImageView
+            android:id="@+id/lblGasolina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="@+id/lblAlcool"
+            app:layout_constraintTop_toBottomOf="@+id/lblAlcool"
+            app:srcCompat="@drawable/icon_gasoline" />
+
+        <EditText
+            android:id="@+id/editGasolina"
+            android:layout_width="150dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="10dp"
+            android:text="Valor da Gasolina"
+            android:textColor="#A9515C58"
+            app:layout_constraintBottom_toBottomOf="@+id/lblGasolina"
+            app:layout_constraintStart_toEndOf="@+id/lblGasolina"
+            app:layout_constraintTop_toTopOf="@+id/lblGasolina" />
+
+        <Button
+            android:id="@+id/botao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Calcular"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/editGasolina"
+            app:layout_constraintStart_toStartOf="@+id/editGasolina"
+            app:layout_constraintTop_toBottomOf="@+id/editGasolina"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/layoutCentro"
+        app:layout_constraintEnd_toEndOf="@+id/layoutCentro"
+        app:layout_constraintTop_toBottomOf="@+id/layoutCentro"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
